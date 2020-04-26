@@ -10,7 +10,7 @@ public class stockDemo {
 	public static void main(String[] args) {
 		
 		// Site fetching from
-		final String url = "http://mlb.mlb.com/stats/sortable.jsp#elem=%5Bobject+Object%5D&tab_level=child&click_text=Sortable+Player+hitting&game_type='R'&season=2019&season_type=ANY&league_code='MLB'&sectionType=sp&statType=hitting&page=1&ts=1587933285463";
+		final String url = "https://www.baseball-reference.com/teams/NYY/2019.shtml";
 		
 		try {
 			final Document doc = Jsoup.connect(url).get();
