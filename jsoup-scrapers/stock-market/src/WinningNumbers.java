@@ -11,15 +11,14 @@ public class WinningNumbers {
 		try {
 			final Document doc = Jsoup.connect(url).get();
 			
+			System.out.println(doc);
+			
 			for (Element row : doc.select(
 					"table.large-only.rt-responsive-table-0.rt-responsive-table tr")) {
 				
 				final String drawDate = row.select("td:nth-of-type(1)").text();
-				
-				//System.out.println(drawDate);
+				System.out.println(drawDate);
 			}
-			
-			System.out.println(doc.outerHtml());
 		}
 		catch (Exception ex) {
 			ex.printStackTrace();
