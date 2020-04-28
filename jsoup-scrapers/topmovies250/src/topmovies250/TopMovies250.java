@@ -17,8 +17,9 @@ public class TopMovies250 {
 			for (Element row : doc.select(
 					"table.chart.full-width tr")) {
 				final String title = row.select(".titleColumn a").text();
+				final String rating = row.select(".imdbRating").text();
 				
-				System.out.println("Movie Title: " + title);
+				System.out.println("Movie: " + title + ". | Rating: " + rating);
 			}
 			
 		}
