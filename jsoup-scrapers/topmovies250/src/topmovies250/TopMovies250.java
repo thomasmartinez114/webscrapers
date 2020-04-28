@@ -12,7 +12,15 @@ public class TopMovies250 {
 		try {
 			final Document doc = Jsoup.connect(url).get();
 			// Print out the whole get() of site
-			System.out.println(doc);
+			//System.out.println(doc);
+			
+			for (Element row : doc.select(
+					"table.chart.full-width tr")) {
+				final String title = row.select(".titleColumn a").text();
+				
+				System.out.println("Movie Title: " + title);
+			}
+			
 		}
 		catch (Exception ex) {
 			ex.printStackTrace();
