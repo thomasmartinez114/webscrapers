@@ -19,7 +19,7 @@ public class TopMovies250 {
 				final String title = row.select(".titleColumn a").text();
 				final String rating = row.select(".imdbRating").text();
 				
-				System.out.println(title);
+				System.out.println(title + rating);
 			}
 			
 		}
